@@ -1,4 +1,4 @@
-# Get KeyCloak Public Key [![Build Status](https://travis-ci.org/aquator/node-get-keycloak-public-key.svg?branch=master)](https://travis-ci.org/aquator/node-get-keycloak-public-key) [![Coverage Status](https://coveralls.io/repos/github/aquator/node-get-keycloak-public-key/badge.svg?branch=master)](https://coveralls.io/github/aquator/node-get-keycloak-public-key?branch=master)
+# Get KeyCloak Public Key [![Build Status](https://travis-ci.org/aquator/node-get-keycloak-public-key.svg?branch=master)](https://travis-ci.org/aquator/node-get-keycloak-public-key) [![Coverage Status](https://coveralls.io/repos/github/aquator/node-get-keycloak-public-key/badge.svg?branch=master)](https://coveralls.io/github/aquator/node-get-keycloak-public-key?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)  [![Downloads Counter](https://img.shields.io/npm/dt/get-keycloak-public-key.svg)](https://www.npmjs.com/package/get-keycloak-public-key)
 Provides access to PEM Public Keys from a [KeyCloak][1] server for [JWT][2] validation.
 
 ## Introduction
