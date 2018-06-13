@@ -1,0 +1,13 @@
+image: node:8-alpine
+
+stages:
+- test
+
+before_script:
+- npm prune --silent
+- npm install --silent
+
+test:
+  script:
+  - npm run lint
+  - npm run coverage -- --100 --coverage-report=text-summary

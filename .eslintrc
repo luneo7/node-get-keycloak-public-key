@@ -1,11 +1,11 @@
 {
-  "extends": "airbnb",
+  "extends": "airbnb-base",
   "env": {
-    "node": true,
-    "es6": true
+    "node": true
   },
   "rules": {
     "comma-dangle": ["error", "never"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["test.js"]}],
     "no-param-reassign": ["error", { "props": false }],
     "no-use-before-define": ["error", "nofunc"],
     "require-await": ["error"]
