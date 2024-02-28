@@ -121,4 +121,16 @@ const PUBLIC_KEY_2 = '-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAniqcAxl7LclB0k
     t.equals(publicKey2, PUBLIC_KEY_2, 'mathces public key2');
     t.end();
   });
+  tap.test(`${protocol} response on custom url with utf8 header`, async (t) => {
+    nock(`${protocol}://testkeycloak.net`)
+      .get('/custom')
+      .twice()
+      .reply(200, JSON, { 'Content-Type': 'application/json;charset=UTF-8' });
+    const fetcher = new Fetcher(`${protocol}://testkeycloak.net/custom`);
+    const publicKey1 = await fetcher.fetch('kid1');
+    const publicKey2 = await fetcher.fetch('kid2');
+    t.equals(publicKey1, PUBLIC_KEY_1, 'matches public key1');
+    t.equals(publicKey2, PUBLIC_KEY_2, 'mathces public key2');
+    t.end();
+  });
 });

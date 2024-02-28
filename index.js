@@ -37,7 +37,7 @@ function getJson(url) {
 }
 
 function valid(response) {
-  return response.statusCode === 200 && response.headers['content-type'] === 'application/json';
+  return response.statusCode === 200 && response.headers['content-type'].includes('application/json');
 }
 
 function parse(response) {
